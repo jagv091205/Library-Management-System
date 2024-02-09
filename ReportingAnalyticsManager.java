@@ -1,0 +1,88 @@
+// File name: ReportingAnalyticsManager.java
+package librarymanagement;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ReportingAnalyticsManager {
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/library";
+    private static final String DB_USER = "root";
+    private static final String DB_PASS = "root";
+    private static Connection conn = null;
+    private static Statement stmt = null;
+    private static ResultSet rs = null;
+
+    public static void main(String[] args) {
+        try {
+            conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+            stmt = conn.createStatement();
+            System.out.println("Connected to the database successfully.");
+        } catch (SQLException e) {
+            System.out.println("Error connecting to the database.");
+            e.printStackTrace();
+        }
+
+        while (true) {
+            System.out.println("Reporting and Analytics Menu:");
+            System.out.println("1. Generate report on popular books");
+            System.out.println("2. Generate report on most borrowed books");
+            System.out.println("3. Generate report on overdue books");
+            System.out.println("4. Analytics for data-driven decisions");
+            System.out.println("5. Exit");
+            int choice = new java.util.Scanner(System.in).nextInt();
+
+            switch (choice) {
+                case 1:
+                    generatePopularBooksReport();
+                    break;
+                case 2:
+                    generateMostBorrowedBooksReport();
+                    break;
+                case 3:
+                    generateOverdueBooksReport();
+                    break;
+                case 4:
+                    performAnalytics();
+                    break;
+                case 5:
+                    System.out.println("Exiting Reporting and Analytics Menu.");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
+            }
+        }
+    }
+
+    private static void generatePopularBooksReport() {
+        // Implement logic to generate a report on popular books
+        // Use appropriate SQL queries and printing logic
+        // Example: Display books with the highest ratings or most views
+        System.out.println("Generating report on popular books...");
+    }
+
+    private static void generateMostBorrowedBooksReport() {
+        // Implement logic to generate a report on most borrowed books
+        // Use appropriate SQL queries and printing logic
+        // Example: Display books with the highest number of borrowings
+        System.out.println("Generating report on most borrowed books...");
+    }
+
+    private static void generateOverdueBooksReport() {
+        // Implement logic to generate a report on overdue books
+        // Use appropriate SQL queries and printing logic
+        // Example: Display books that are overdue and need to be returned
+        System.out.println("Generating report on overdue books...");
+    }
+
+    private static void performAnalytics() {
+        // Implement analytics for data-driven decisions
+        // Use appropriate SQL queries and printing logic
+        // Example: Display trends, patterns, or insights from the data
+        System.out.println("Performing analytics for data-driven decisions...");
+    }
+}
