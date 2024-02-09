@@ -1,5 +1,5 @@
 // File name: BorrowReturnManager.java
-package librarymanagement;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -83,7 +83,7 @@ public class BorrowReturnManager {
         }
     }
 
-    private static void returnBook() {
+    static void returnBook() {
         try {
             Scanner sc = new Scanner(System.in);
 
