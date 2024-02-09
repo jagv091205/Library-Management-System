@@ -1,5 +1,5 @@
 // File name: ReportingAnalyticsManager.java
-package librarymanagement;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
