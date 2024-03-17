@@ -37,6 +37,6 @@
    <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
 
    <h2>Contact:</h2>
-    <p>If you have any questions or suggestions, feel free to contact us at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+    <p>If you have any questions or suggestions, feel free to contact us.</p>
 </body>
 </html>
